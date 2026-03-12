@@ -343,6 +343,67 @@
   .frame-inner > *:nth-child(8){animation-delay:.48s}
   .frame-inner > *:nth-child(9){animation-delay:.54s}
   @keyframes su { from{opacity:0;transform:translateY(8px)} to{opacity:1;transform:translateY(0)} }
+
+  /* ── RESPONSIVE ── */
+
+  @media (max-width: 700px) {
+    body { padding: 28px 14px; }
+    .frame-inner { padding: 40px 28px 36px; }
+    .corner { width: 52px; height: 52px; }
+    .corner.tl { top: -8px; left: -8px; }
+    .corner.tr { top: -8px; right: -8px; }
+    .corner.bl { bottom: -8px; left: -8px; }
+    .corner.br { bottom: -8px; right: -8px; }
+    .guild-tag { font-size: 9px; letter-spacing: 0.15em; margin-bottom: 20px; }
+    .wordmark-ratchet { margin-bottom: 24px; }
+    .divider { font-size: 8px; margin: 18px 0; }
+    .gear-illustration { max-width: 100%; }
+    .footer-strip {
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      font-size: 8px;
+      text-align: center;
+    }
+    .cert-btn {
+      font-size: 11px;
+      padding: 14px 20px;
+      white-space: normal;
+      line-height: 1.8;
+    }
+  }
+
+  @media (max-width: 480px) {
+    body { padding: 18px 10px; }
+    .frame-outer { border-width: 1px; padding: 3px; }
+    .frame-mid   { padding: 3px; }
+    .frame-inner { padding: 32px 18px 28px; }
+    .corner { display: none; }
+    .tick { width: 14px; height: 14px; }
+    .guild-tag { font-size: 8px; letter-spacing: 0.1em; margin-bottom: 16px; }
+    .guild-tag::before, .guild-tag::after { margin: 0 6px; }
+    .wordmark-ratchet { margin-top: 8px; margin-bottom: 20px; }
+    .divider { font-size: 7px; gap: 8px; margin: 14px 0; }
+    .headline-welcome { font-size: 9px; margin-bottom: 10px; }
+    .tagline { font-size: 9px; letter-spacing: 0.1em; }
+    .gear-illustration { max-width: none; width: 100%; overflow: visible; }
+    .cert-section { margin-top: 28px; }
+    .cert-label { font-size: 8px; letter-spacing: 0.1em; }
+    .cert-btn {
+      font-size: 10px;
+      padding: 13px 16px;
+      gap: 8px;
+      width: 100%;
+      justify-content: center;
+      clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+    }
+    .footer-strip { margin-top: 28px; font-size: 7px; letter-spacing: 0.08em; gap: 6px; }
+    .loader-title { font-size: 16px; letter-spacing: 0.12em; }
+    .loader-sub   { font-size: 9px; letter-spacing: 0.1em; }
+    .loader-gears { transform: scale(0.8); margin: -10px 0; }
+    .loader-status { font-size: 8px; }
+    .loader-press  { font-size: 10px; padding: 10px 18px; }
+  }
 </style>
 </head>
 <body>
